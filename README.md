@@ -9,6 +9,11 @@ This repository is an OpenClaw-adapted diagram skill focused on:
 - themed output for different brands and content surfaces
 - teaching-friendly styles such as whiteboard and handout layouts
 
+## Acknowledgement
+
+This project stands on the shoulders of the upstream `coleam00/excalidraw-diagram-skill` work.
+This repository is an OpenClaw-oriented adaptation and extension, not an attempt to erase the original source or claim the core idea as wholly original.
+
 ## Why this exists
 
 Most diagram prompts produce generic boxes and arrows.
