@@ -3,11 +3,21 @@
 Create polished Excalidraw diagrams that **argue visually**, not just display boxes.
 
 This repository is an OpenClaw-adapted diagram skill focused on:
-- natural-language chart requests,
-- automatic diagram-type selection,
-- render-and-fix validation,
-- themed output for different brands and content surfaces,
-- teaching-friendly styles such as whiteboard and handout layouts.
+- natural-language chart requests
+- automatic diagram-type selection
+- render-and-fix validation
+- themed output for different brands and content surfaces
+- teaching-friendly styles such as whiteboard and handout layouts
+
+## Why this exists
+
+Most diagram prompts produce generic boxes and arrows.
+This skill tries to do something better:
+- pick the **right diagram type** for the task
+- organize the information visually
+- render the result to PNG
+- inspect it as an image
+- fix layout problems before delivery
 
 ## What makes this different
 
@@ -16,6 +26,20 @@ This repository is an OpenClaw-adapted diagram skill focused on:
 - **Render → inspect → fix loop** — output is rendered to PNG and visually checked instead of trusting JSON blindly.
 - **Theme system** — supports a neutral default theme plus brand-specific palettes.
 - **Style phrases** — supports practical modes like whiteboard, handout, explainer, and course-illustration style.
+
+## Showcase
+
+### Comparison diagram
+![OpenViking vs OpenClaw](screenshots/openviking-vs-openclaw.png)
+
+### Whiteboard-style explainer
+![Quadratic Bezier Whiteboard](screenshots/quadratic-bezier-whiteboard.png)
+
+### Handout-style classroom explainer
+![Two-variable Linear Equation Handout](screenshots/two-variable-linear-equation-handout.png)
+
+### Detailed course illustration
+![Photosynthesis Course Illustration](screenshots/photosynthesis-course-detailed.png)
 
 ## Best-fit use cases
 
@@ -53,14 +77,7 @@ Compared with the upstream skill, this version includes:
 Clone or copy the skill into your OpenClaw workspace:
 
 ```bash
-git clone <this-repo> ~/.openclaw/workspace/skills/miaomiaojiang_excalidraw
-```
-
-If you're starting from the upstream repo:
-
-```bash
-git clone https://github.com/coleam00/excalidraw-diagram-skill.git
-cp -r excalidraw-diagram-skill ~/.openclaw/workspace/skills/miaomiaojiang_excalidraw
+git clone https://github.com/yuanyang749/miaomiaojiang_excalidraw.git ~/.openclaw/workspace/skills/miaomiaojiang_excalidraw
 ```
 
 ## Renderer setup
@@ -73,7 +90,7 @@ uv sync
 uv run playwright install chromium
 ```
 
-## Usage
+## Quick usage
 
 In OpenClaw chat, ask naturally or use slash-style prompts:
 
@@ -180,6 +197,7 @@ Included examples currently cover:
 miaomiaojiang_excalidraw/
 ├── SKILL.md
 ├── README.md
+├── LICENSE
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── ATTRIBUTION.md
@@ -195,9 +213,8 @@ miaomiaojiang_excalidraw/
     └── pyproject.toml
 ```
 
-## Before publishing publicly
+## Credits
 
-One thing still needs explicit confirmation before a broad public release:
-- choose and add a final open-source license that is compatible with the upstream source you adapted from.
+This project is adapted from the idea and workflow of the upstream `coleam00/excalidraw-diagram-skill`, then extended for OpenClaw workflows, theme presets, and teaching-oriented output.
 
-See `ATTRIBUTION.md` for adaptation notes.
+See `ATTRIBUTION.md` for details.
