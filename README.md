@@ -95,6 +95,10 @@ uv sync
 uv run playwright install chromium
 ```
 
+## AI agent install note
+
+If you are an AI agent installing this skill into OpenClaw, place the repository at `~/.openclaw/workspace/skills/miaomiaojiang_excalidraw`, then run `cd references && uv sync && uv run playwright install chromium`. After setup, use the skill for natural-language diagram requests such as architecture diagrams, flowcharts, comparison diagrams, whiteboard explainers, and handout-style teaching visuals.
+
 ## Quick usage
 
 In OpenClaw chat, ask naturally or use slash-style prompts:
